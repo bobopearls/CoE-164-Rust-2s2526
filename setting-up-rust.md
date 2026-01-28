@@ -18,3 +18,13 @@ nano [filename].rs
 nano learning_rust.rs
 ```
 Then start typing your program!
+
+How to run your programs on the terminal:
+```
+rustc [filename].rs
+rustc main.rs
+```
+Then run the program by typing:
+```
+./main
+```
