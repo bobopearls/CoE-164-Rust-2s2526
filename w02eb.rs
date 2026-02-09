@@ -35,48 +35,48 @@ fn main() {
 fn normalize_code(digi_code: &str) -> String {
     // TODO: Edit this function to normalize a digit or letter code 
     //       string to a digit string
-    let mut digi_code_arr = String::new(); // output
+    let mut digi_code_str = String::new(); // output
     for d in digi_code.chars(){
 		if d >= 'A' && d <= 'J' {
-			digi_code_arr.push( ( (d as u8 -b'A') + b'0') as char );
+			digi_code_str.push( ( (d as u8 -b'A') + b'0') as char );
 		}
 		else if d >= '0' && d <= '9'{
-			digi_code_arr.push(d); // keep as is
+			digi_code_str.push(d); // keep as is
 		}
     	/*
     	EQUIVALENT CODE THAT IS WAY TOO LONG. i was lazy to understand the b'A' stuff at first
     	if d == 'A'{
-    		digi_code_arr.push('0');
+    		digi_code_str.push('0');
     	}
     	else if d == 'B'{
-    		digi_code_arr.push('1');
+    		digi_code_str.push('1');
     	}
     	else if d == 'C'{
-    		digi_code_arr.push('2');
+    		digi_code_str.push('2');
     	}
     	else if d == 'D'{
-    		digi_code_arr.push('3');
+    		digi_code_str.push('3');
     	}
     	else if d == 'E'{
-    		digi_code_arr.push('4');
+    		digi_code_str.push('4');
     	}
     	else if d == 'F'{
-    		digi_code_arr.push('5');
+    		digi_code_str.push('5');
     	}
     	else if d == 'G'{
-    		digi_code_arr.push('6');
+    		digi_code_str.push('6');
     	}
     	else if d == 'H'{
-    		digi_code_arr.push('7');
+    		digi_code_str.push('7');
     	}
     	else if d == 'I'{
-    		digi_code_arr.push('8');
+    		digi_code_str.push('8');
     	}
     	else if d == 'J'{
-    		digi_code_arr.push('9');
+    		digi_code_str.push('9');
     	}
     	else if d>= '0' && d<= '9' { // if it is a digit, then keep it as is
-    		digi_code_arr.push(d);
+    		digi_code_str.push(d);
     	}  // no need to use push_str since it returns a string already
     	else{
 			// wala
@@ -85,7 +85,7 @@ fn normalize_code(digi_code: &str) -> String {
     	 */
     }
     
-    digi_code_arr
+    digi_code_str
 }
 
 fn amplify(digits: &str) -> (u32, String) {
