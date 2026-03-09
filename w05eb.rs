@@ -60,7 +60,10 @@ impl<'a> FileSystem<'a> {
 
         for line in input.lines() {
             let trimmed_line = line.trim();
-            if trimmed_line == "END" || trimmed_line == "@"{
+            if trimmed_line == "END" {
+                continue;
+            }
+            if trimmed_line == "@"{
                 break;
             }
             if let Some(name) = trimmed_line.strip_prefix("DIR "){
